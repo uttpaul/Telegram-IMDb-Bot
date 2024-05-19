@@ -93,7 +93,7 @@ def handle_Callback_query(update: Update, context):
     elif data.startswith("view_images:"):
         _, movie_id, movie_title = data.split(":", 2)
         
-        images_url = f"https://imdb-api.com/en/API/Images/{IMDB_API_KEY}/{movie_id}"
+        images_url = f"https://imdb-api.com/en/API/Images/aassddffvvvv/{movie_id}"
         images_response = requests.get(images_url).json()
         image_items = images_response.get("items")[:10]
 
