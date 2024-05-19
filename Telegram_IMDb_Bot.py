@@ -33,7 +33,7 @@ def tools(update: Update, context):
     update.message.reply_text(message, reply_markup=keyboard)  # Send the message with the inline keyboard
 
 # Handle callback queries (button clicks)
-def handle_callback_query(update: Update, context):
+def handle_Callback_query(update: Update, context):
     query = update.callback_query
     data = query.data
     
@@ -65,7 +65,7 @@ def handle_callback_query(update: Update, context):
             query.answer("✅ Movie removed from your watchlist!")
             # Call view_watchlist again to display the updated watchlist
             query.data = "view_watchlist"
-            handle_callback_query(update, context)
+            handle_Callback_query(update, context)
         else:
             query.answer("ℹ️ Movie not found in your watchlist.")
             
@@ -202,7 +202,7 @@ def main():
     dispatcher.add_handler(CommandHandler("restart", restart))
     
     # Add callback query handler for handling button clicks
-    dispatcher.add_handler(CallbackQueryHandler(handle_callback_query))
+    dispatcher.add_handler(CallbackQueryHandler(handle_Callback_query))
     
     # Add inline query handler for searching movies
     dispatcher.add_handler(InlineQueryHandler(inline_search_movies))
