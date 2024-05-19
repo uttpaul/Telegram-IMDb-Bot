@@ -188,7 +188,7 @@ def display_movie_details(update: Update, context):
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_photo(photo=response["image"], caption=details, reply_markup=reply_markup, parse_mode="Markdown")
     
-    # Delete the message containing the movie ID
+    # Delete the message containing the movie ID uttam
     context.bot.delete_message(chat_id=chat_id, message_id=message_id)
 
 # Main function to set up handlers and start the bot
