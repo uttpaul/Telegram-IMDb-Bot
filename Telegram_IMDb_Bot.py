@@ -7,6 +7,7 @@ API_KEY = "your_telegram_bot_api_key"
 
 # IMDb API key   
 IMDB_API_KEY = "your_imdb_api_key"
+IMDB_API_KEY = "your_imdb_api_key"
 
 # Store users' watchlists as a dictionary
 user_watchlists = {}
