@@ -34,7 +34,7 @@ def tools(update: Update, context):
     update.message.reply_text(message, reply_markup=keyboard)  # Send the message with the inline keyboard
 
 # Handle callback queries (button clicks)
-def handle_Callback_query(update: Update, context):
+def handle_callback_query(update: Update, context):
     query = update.callback_query
     data = query.data
     
